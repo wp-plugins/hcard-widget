@@ -3,10 +3,10 @@
 Plugin Name: hCard Widget
 Plugin URI: http://lautman.ca/hcard-wordpress-widget/
 Description: Outputs contact information in accordance with the hCard microformat standard (http://microformats.org
-Version: 1.1
+Version: 1.3
 Author: Michael Lautman, @michaellautman
 Author URI: http://lautman.ca
-License: GPLv2 or later
+License: GPLv3
 */
 /**Code for Individual hCard**/
 class  hCard_widget extends WP_Widget {
@@ -20,7 +20,7 @@ class  hCard_widget extends WP_Widget {
 		return array('title','main_class' ,'name_class', 'name_block_class','name_url','given_name','middle_name','family_name'
 		,'organization','organization_class','email','email_class','address_class','street_address','street_address_class',
 		'locality_address','locality_address_class','region_address','region_address_class','postal_address','postal_address_class','country_address',
-		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url', 'map_url');
+		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url');
 	    }
     /** @see WP_Widget::widget -- do not rename this */
     function widget($args, $instance) {	
@@ -43,7 +43,7 @@ class  hCard_widget extends WP_Widget {
 					<span class="family-name <?php echo $family_name_class;?>" itemprop="familyName"> <?php echo $family_name;?></span></a>
 				    </span>
 				    <div class="org <?php echo $organization_class;?>" itemscope itemtype="http://schema.org/Organization"><a class="url"  href="<?php echo $org_url;?>" itemprop="url"> <?php echo $organization;?></a></div>
-				    <span itemprop="jobTitle"><?php echo $job_title;?></span>
+				    
 				    <span class="email <?php echo $email_class;?>" itemprop="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br>
 				    <a class="url <?php echo $website_class;?>" href="<?php echo $website;?>" itemprop="url"><?php echo $website;?></a>
 				    <div class="adr <?php echo $address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -55,13 +55,10 @@ class  hCard_widget extends WP_Widget {
 					<span class="postal-code <?php echo $postal_address_class;?>" itemprop="postalCode"> <?php echo $postal_address;?></span><br>
 
 					<span class="country-name <?php echo $country_address_class;?>" itemprop="addressCountry"> <?php echo $country_address;?></span>
-					<?php if($map_url !== '') { ?><a href="<?php echo $map_url;?>" target="_blank" itemprop="map">MAP</a><?php } ?>
 				    </div>
 				    <div class="tel <?php echo $tel_class;?>" itemprop="telephone"><?php echo $tel;?></div>
 					<div class="tel <?php echo $fax_class;?>"><?php echo $fax;?></div>
-					
-
-
+			</div>
 			</div>
        <?php echo $after_widget;
        }
@@ -184,11 +181,6 @@ class  hCard_widget extends WP_Widget {
 	    </tr>
 	    <tr>
 		<td>
-		<table>
-		<tr><td><label>Job Title:</label></td>
-		<td><td><input type="text" size="13px"  name="job_title"  value="<?php echo $job_title;?>" /></td>
-</tr>
-<td>
 		    <table>
 			<tr>
 			    <td><label>Email:</label></td>
@@ -334,11 +326,6 @@ class  hCard_widget extends WP_Widget {
 		    </td>
 		</tr>
 		<tr>
-		<td><table>
-		<tr><td><label>Map URL:</label></td>
-		<td><input type="text" size="13px"  name="map_url"  value="<?php echo $map_url?>" /></td>
-		</tr></table></td></tr>
-		<tr>
 		    <td><hr /></td>
 		</tr>
 		<tr>
@@ -354,7 +341,6 @@ class  hCard_widget extends WP_Widget {
 			    </tr>
 			</table>
 		    </td>
-			
 		</tr>
            </table>
 <?php 
@@ -369,14 +355,14 @@ class  org_hCard_widget extends WP_Widget {
  
  
     /** constructor -- name this the same as the class above */
-    function hCard_widget() {
+    function org_hCard_widget() {
 	    parent::WP_Widget(false, $name = 'Organization hCard Widget');	
 	    }
     function form_arg(){
 		return array('title','main_class' ,'name_class', 'name_block_class','name_url','given_name','middle_name','family_name'
 		,'organization','organization_class','email','email_class','address_class','street_address','street_address_class',
 		'locality_address','locality_address_class','region_address','region_address_class','postal_address','postal_address_class','country_address',
-		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url');
+		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url','map_url');
 	    }
     /** @see WP_Widget::widget -- do not rename this */
     function widget($args, $instance) {	
@@ -396,20 +382,20 @@ class  org_hCard_widget extends WP_Widget {
 				    
 				    <div class="fn org <?php echo $organization_class;?>"><a class="url"  href="<?php echo $org_url;?>" itemprop="url"> <?php echo $organization;?></a></div>
 				    
-				    <span class="email <?php echo $email_class;?>" itemprop="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br>
+				    <?php if($email !== '') { ?><span class="email <?php echo $email_class;?>" itemprop="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br><?php } ?>
 				    <a class="url <?php echo $website_class;?>" href="<?php echo $website;?>" itemprop="url"><?php echo $website;?></a>
 				    <div class="adr <?php echo $address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<div class="street-address <?php echo $street_address_class;?>" itemprop="streetAddress"> <?php echo $street_address;?></div>
 					<span class="locality <?php echo $locality_address_class;?>" itemprop="addressLocality"> <?php echo $locality_address;?></span>
 					, 
-					<span class="region <?php echo $region_address_class;?>" itemprop="addressRegion"> <?php echo $region_address;?></span>
-					, 
+					<span class="region <?php echo $region_address_class;?>" itemprop="addressRegion"> <?php echo $region_address;?></span><br>
+					<span class="country-name <?php echo $country_address_class;?>" itemprop="addressCountry"> <?php echo $country_address;?></span>,
 					<span class="postal-code <?php echo $postal_address_class;?>" itemprop="postalCode"> <?php echo $postal_address;?></span><br>
-
-					<span class="country-name <?php echo $country_address_class;?>" itemprop="addressCountry"> <?php echo $country_address;?></span>
-				    </div>
+					<?php if($map_url !== '') {?>		
+					<a href="<?php echo $map_url;?>" target="_blank" itemprop="map">MAP</a><?php } ?>
 				    <div class="tel <?php echo $tel_class;?>" itemprop="telephone"><?php echo $tel;?></div>
 					<div class="tel <?php echo $fax_class;?>" itemprop="faxNumber"><?php echo $fax;?></div>
+			</div>
 			</div>
        <?php echo $after_widget;
        }
@@ -435,7 +421,7 @@ class  org_hCard_widget extends WP_Widget {
         foreach($array as $val)
 			
          $instance[$val]=strip_tags($new_instance[$val]);
-        //if(in_array('',$new_instance) || !$this->validateEmail($instance['email']) || !$this->isValidURL($instance['website'] || !$this->isValidURL($instance['org_url']) ||  !$this->isValidURL($instance['name_url']) {$instance['error']=true;return $instance;}
+        //if(in_array('',$new_instance) || !$this->validateEmail($instance['email']) || !$this->isValidURL($instance['website'] || !$this->isValidURL($instance['org_url'] ||  !$this->isValidURL($instance['name_url'] ||  !$this->isValidURL($instance['map_url']) {$instance['error']=true;return $instance;}
 		return $instance;
     }
  
@@ -651,6 +637,14 @@ class  org_hCard_widget extends WP_Widget {
 		    <td><hr /></td>
 		</tr>
 		<tr>
+		<td><table>
+		<tr><td><label>Map URL:</label></td>
+		<td><input type="text" size="13px"  name="<?php echo $this->get_field_name('map_url'); ?>"  value="<?php echo $map_url; ?>" /></td>
+		</tr></table></td></tr>
+		<tr>
+		    <td><hr /></td>
+		</tr>
+		<tr>
 		    <td>
 			<table>
 			    <tr>
@@ -670,8 +664,4 @@ class  org_hCard_widget extends WP_Widget {
 } // end class example_widget
 
 add_action('widgets_init', create_function('', 'return register_widget("org_hCard_widget");'));
-remove_filter( 'the_content', 'wpautop' );
-add_filter( 'the_content', 'wpautop' , 99);
-add_filter( 'the_content', 'shortcode_unautop',100 );
-
 ?>

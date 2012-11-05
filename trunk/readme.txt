@@ -8,9 +8,9 @@ Stable tag: 1.2
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
-This plugin creates a new widget that outputs contact information (URL, address, email, phone) according to the hCard microformat standard and Schema.org
+This plugin creates a new widget that outputs contact information (URL, address, email, phone) according to Schema.org and hCard microformat.
 
-==Description==
+== Description ==
 This plugin creates a new widget that outputs contact information (URL, address, email, phone) according to the hCard microformat standard and Schema.org
 In addition, each field can be assigned a unique CSS class for styling.
 
@@ -41,11 +41,14 @@ No idea.
 
 
 == Changelog ==
-=1.0=
+= 1.0 =
 Initial release. 
 
 = 1.1 =
 Fixed layout and added the option to link both name and organization name.
 
 = 1.2 =
-Added basic support for Schema.org and separate widgets for individuals and organizations.
+Added basic support for Schema.org and separate widgets for individuals and organizations
+
+= 1.3 =
+Added field for map URL.
