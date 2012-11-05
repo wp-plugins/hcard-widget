@@ -1,4 +1,4 @@
-== hCard Widget for Wordpress ===
+=== hCard Widget for Wordpress ===
 Contributors: michaellautman
 URL: http://lautman.ca/hcard-wordpress-widget/
 Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org
@@ -29,7 +29,7 @@ METHOD 2: FTP
 4. Login to your WordPress account and go to the Plugins page.
 5. Activate the plugin.
 
-== FAQ ==
+== Frequently Asked Questions ==
 = Why didn't someone think of this before ?==
 No idea.
 
@@ -52,3 +52,7 @@ Added basic support for Schema.org and separate widgets for individuals and orga
 
 = 1.3 =
 Added field for map URL.
+
+== Upgrade Notice ==
+= 1.3 =
+Extended Schema.org, fixed some formatting and included a field for map url (Google, Bing, MapQuest).
