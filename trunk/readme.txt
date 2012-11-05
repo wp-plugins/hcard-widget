@@ -1,10 +1,10 @@
 === hCard Widget for Wordpress ===
 Contributors: michaellautman
 URL: http://lautman.ca/hcard-wordpress-widget/
-Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org
+Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
 Requires at least: 3.0.1
 Tested up to: 3.4.2
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
