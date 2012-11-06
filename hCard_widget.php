@@ -3,7 +3,7 @@
 Plugin Name: hCard Widget
 Plugin URI: http://lautman.ca/hcard-wordpress-widget/
 Description: Outputs contact information in accordance with the hCard microformat standard (http://microformats.org
-Version: 1.3.3
+Version: 1.3.4
 Author: Michael Lautman, @michaellautman
 Author URI: http://lautman.ca
 License: GPLv3
@@ -59,7 +59,7 @@ class  hCard_widget extends WP_Widget {
 				    <div class="tel <?php echo $tel_class;?>" itemprop="telephone"><?php echo $tel;?></div>
 					<div class="tel <?php echo $fax_class;?>"><?php echo $fax;?></div>
 			</div>
-			</div>
+		
        <?php echo $after_widget;
        }
     }
@@ -396,7 +396,7 @@ class  org_hCard_widget extends WP_Widget {
 				    <div class="tel <?php echo $tel_class;?>" itemprop="telephone"><?php echo $tel;?></div>
 					<div class="tel <?php echo $fax_class;?>" itemprop="faxNumber"><?php echo $fax;?></div>
 			</div>
-			</div>
+			
        <?php echo $after_widget;
        }
     }
