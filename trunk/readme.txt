@@ -4,7 +4,7 @@ URL: http://lautman.ca/hcard-wordpress-widget/
 Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
 Requires at least: 3.0.1
 Tested up to: 3.4.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
@@ -18,23 +18,23 @@ In addition, each field can be assigned a unique CSS class for styling.
 == Installation ==
 METHOD 1: USING THE WORDPRESS INSTALLER
 1. Download hCard Widget for WordPress plugin (hCard_Widget.zip)
-2. Login to WordPress and go to Plugins-> Add New -> Upload
-3. Click the “Choose File” button and select ‘hCard_Widget.zip” from your hard drive.
-4. Click “Install Now”
-5. Once the plugin has been installed, click “Activate”.
+1. Login to WordPress and go to Plugins-> Add New -> Upload
+1. Click the Choose File button and select hCard_Widget.zip from your hard drive.
+1. Click Install Now
+1. Once the plugin has been installed, click Activate.
 METHOD 2: FTP
 1.  Download hCard Widget for WordPress plugin (hCard_Widget.zip)
-2. Extract the contents of the file.
-3. Using your favourite FTP client, upload the folder to /wp-content/plugins/ on your server.
-4. Login to your WordPress account and go to the Plugins page.
-5. Activate the plugin.
+1. Extract the contents of the file.
+1. Using your favourite FTP client, upload the folder to /wp-content/plugins/ on your server.
+1. Login to your WordPress account and go to the Plugins page.
+1. Activate the plugin.
 
 == Frequently Asked Questions ==
-= Why didn't someone think of this before ?==
+= Why didn't someone think of this before ? =
 No idea.
 
 = What do I do if I have problem? =
-[Email me] (http://lautman.ca/contact/)
+[Email me](http://lautman.ca/contact/)
 
 == Screenshots ==
 1. hCard Widget in Appearance->Widgets
@@ -52,6 +52,9 @@ Added basic support for Schema.org and separate widgets for individuals and orga
 
 = 1.3 =
 Added field for map URL.
+
+= 1.3.2 =
+Added screenshot and updated readme.txt file.
 
 == Upgrade Notice ==
 = 1.3 =
