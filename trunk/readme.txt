@@ -36,16 +36,17 @@ In addition, each field can be assigned a unique CSS class for styling.
 * More options to include more Schema.org elements such as jobTitle and the type of organization.
 
 == Installation ==
-METHOD 1 - USING THE WORDPRESS INSTALLER
-1. Download hCard Widget for WordPress plugin (hCard_Widget.zip)
+
+1. Download hCard Widget for WordPress plugin 'hCard_Widget.zip'
 1. Login to WordPress and go to Plugins-> Add New -> Upload
 1. Click the Choose File button and select hCard_Widget.zip from your hard drive.
 1. Click Install Now
 1. Once the plugin has been installed, click Activate.
 
 METHOD 2 - FTP
-1. Download hCard Widget for WordPress plugin (hCard_Widget.zip). Extract the contents of the file.
-1. Using your favourite FTP client, upload the folder to /wp-content/plugins/ on your server.
+
+1. Download hCard Widget for WordPress plugin 'hCard_Widget.zip'. Extract the contents of the file.
+1. Using your favourite FTP client, upload the folder to '/wp-content/plugins/' on your server.
 1. Login to your WordPress account and go to the Plugins page.
 1. Activate the plugin.
 
