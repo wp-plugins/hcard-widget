@@ -58,7 +58,7 @@ No idea.
 [Email me](http://lautman.ca/contact/)
 
 = How Do I style my contact info? =
-Assign a class to the element(s) you want to you want to style and then refer to that class in 
+Assign a class to the element(s) you want to you want to style and then refer to that class in your theme's 'style.css' file.
 
 == Screenshots ==
 1. hCard Widget in Appearance->Widgets
