@@ -20,7 +20,7 @@ class  hCard_widget extends WP_Widget {
 		return array('title','main_class' ,'name_class', 'name_block_clxass','name_url','given_name','middle_name','family_name'
 		,'organization','organization_class','email','email_class','address_class','street_address','street_address_class',
 		'locality_address','locality_address_class','region_address','region_address_class','postal_address','postal_address_class','country_address',
-		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url', 'googleplus','twitter', 'linkedin','facebook');
+		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url', 'googleplus','twitter', 'linkedin','facebook','job_title');
 	    }
     /** @see WP_Widget::widget -- do not rename this */
     function widget($args, $instance) {	
@@ -38,23 +38,17 @@ class  hCard_widget extends WP_Widget {
 
 			<div itemscope itemtype="http://schema.org/Person" id="ind-hcard" class="vcard <?php echo $main_class;?>">
 				    <span itemprop="name" class="fn n <?php echo $name_class;?>">
-					<span class="given-name" itemprop="givenName"> <?php echo $given_name;?></span>
-					<span class="additional-name" itemprop="additionalName"> <?php echo $middle_name;?></span>
-					<span class="family-name" itemprop="familyName"> <?php echo $family_name;?></span>
+					<span class="given-name" itemprop="givenName"> <?php echo $given_name;?></span><span class="additional-name" itemprop="additionalName"> <?php echo $middle_name;?></span><span class="family-name" itemprop="familyName"> <?php echo $family_name;?></span>
 				    </span>
+					<?php if($job_title !='' { ?><span itemprop="jobTitle" class="<?php echo $job_title_class; ?>"><?php echo $job_title;?></span><?php }?>
 				    <?php if($org != '') { ?><div class="org <?php echo $organization_class;?>" itemscope itemtype="http://schema.org/Organization"><?php echo $organization;?></div><?php } ?>
-				    
-				    <span class="email <?php echo $email_class;?>" itemprop="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br>
+				    				    <span class="email <?php echo $email_class;?>" itemprop="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br>
 				    <a class="url <?php echo $website_class;?>" href="<?php echo $website;?>" itemprop="url"><?php echo $website;?></a>
 				    <div class="adr <?php echo $address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<div class="street-address <?php echo $street_address_class;?>" itemprop="streetAddress"> <?php echo $street_address;?></div>
-					<span class="locality <?php echo $locality_address_class;?>" itemprop="addressLocality"> <?php echo $locality_address;?></span>
-					, 
-					<span class="region <?php echo $region_address_class;?>" itemprop="addressRegion"> <?php echo $region_address;?></span>
-					, 
-					<span class="postal-code <?php echo $postal_address_class;?>" itemprop="postalCode"> <?php echo $postal_address;?></span><br>
-
+					<span class="locality <?php echo $locality_address_class;?>" itemprop="addressLocality"> <?php echo $locality_address;?></span>, <span class="region <?php echo $region_address_class;?>" itemprop="addressRegion"> <?php echo $region_address;?></span>
 					<span class="country-name <?php echo $country_address_class;?>" itemprop="addressCountry"> <?php echo $country_address;?></span>
+					<span class="postal-code <?php echo $postal_address_class;?>" itemprop="postalCode"> <?php echo $postal_address;?></span><br>
 				    </div>
 				    <div class="tel <?php echo $tel_class;?>" itemprop="telephone">T:<?php echo $tel;?></div>
 					<?php if($fax !== '') { ?><div class="tel <?php echo $fax_class;?>" itemprop="faxNumber">F:<?php echo $fax;?></div><?php } ?>
@@ -154,7 +148,11 @@ class  hCard_widget extends WP_Widget {
 			    <td><label>Family Name:</label></td>
 			    <td><input type="text" size="13px"  name="<?php echo $this->get_field_name('family_name'); ?>"  value="<?php echo $family_name;?>" /></td>
 			</tr>
-						
+			<tr><td><label>Job Title</label></td>
+				<td><input type="text" size="13px"  name="<?php echo $this->get_field_name('job_title'); ?>"  value="<?php echo $job_title;?>" /></td>
+			</tr>
+			<tr><td><label>Job Title Class</label></td>
+			<td><input type="text" size="13px"  name="<?php echo $this->get_field_name('job_title_class'); ?>"  value="<?php echo $job_title_class;?>" /></td>
 		    </table>
 		</td>
 	    </tr>
@@ -398,14 +396,11 @@ class  org_hCard_widget extends WP_Widget {
 			<div itemscope itemtype="http://schema.org/Organization" id="org-hcard" class="vcard <?php echo $main_class;?>">
 				    
 				    <div class="fn org <?php echo $organization_class;?>"><?php echo $organization;?></div>
-				    
 				    <?php if($email !== '') { ?><span class="email <?php echo $org_email_class;?>" itemprop="email"><a href="mailto:<?php echo $org_email;?>"><?php echo $org_email;?></a></span><br><?php } ?>
 				    <a class="url <?php echo $org_website_class;?>" href="<?php echo $org_website;?>" itemprop="url"><?php echo $org_website;?></a>
 				    <div class="adr <?php echo $org_address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<div class="street-address <?php echo $org_street_address_class;?>" itemprop="streetAddress"> <?php echo $org_street_address;?></div>
-					<span class="locality <?php echo $org_locality_address_class;?>" itemprop="addressLocality"> <?php echo $org_locality_address;?></span>
-					, 
-					<span class="region <?php echo $org_region_address_class;?>" itemprop="addressRegion"> <?php echo $org_region_address;?></span><br>
+					<span class="locality <?php echo $org_locality_address_class;?>" itemprop="addressLocality"> <?php echo $org_locality_address;?></span>, <span class="region <?php echo $org_region_address_class;?>" itemprop="addressRegion"> <?php echo $org_region_address;?></span><br>
 					<span class="country-name <?php echo $org_country_address_class;?>" itemprop="addressCountry"> <?php echo $org_country_address;?></span>,
 					<span class="postal-code <?php echo $org_postal_address_class;?>" itemprop="postalCode"> <?php echo $org_postal_address;?></span><br></div>
 					<?php if($map_url !== '') {?>		
@@ -748,6 +743,27 @@ function register_hcard_options_page(){
 	
 	You can also show your apppreciation by <a href="http://my.e2rm.com/personalPage.aspx?registrationID=1688089" target="_blank">Donating to UNICEF</a>.
 	<br>
+	<div id="hcard-settings-social">
+	<h3>Why Not Share The Love?  Tell Your Friends!</h3>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=388689464532677";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="http://lautman.ca/hcard-widget-wordpress/" data-send="true" data-width="450" data-show-faces="true" data-action="recommend" data-font="lucida grande"></div>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bit.ly/TrZ2Wd" data-text="Using Wordpress? Supercharge your local SEO!" data-via="michaellautman" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	
+	</div>
+<div id="hcard-social-follow">
+<h3>Keep In Touch</h3>
+Let me know what you think about the plugin, and stay on top of all the changes and improvements in works for this plugin.<br>
+<a href="https://twitter.com/michaellautman" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @michaellautman</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div class="fb-subscribe" data-href="https://www.facebook.com/thelautmangroup" data-show-faces="true" data-width="450"></div>
 
 	</div>
 		<?php }?>
