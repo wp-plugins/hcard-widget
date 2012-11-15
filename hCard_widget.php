@@ -3,7 +3,7 @@
 Plugin Name: hCard Widget
 Plugin URI: http://lautman.ca/hcard-wordpress-widget/
 Description: Outputs contact information in accordance with the hCard microformat standard (http://microformats.org
-Version: 1.4.1
+Version: 1.4.1.1
 Author: Michael Lautman, @michaellautman
 Author URI: http://lautman.ca
 License: GPLv3
@@ -20,7 +20,8 @@ class  hCard_widget extends WP_Widget {
 		return array('title','main_class' ,'name_class', 'name_block_clxass','name_url','given_name','middle_name','family_name'
 		,'organization','organization_class','email','email_class','address_class','street_address','street_address_class',
 		'locality_address','locality_address_class','region_address','region_address_class','postal_address','postal_address_class','country_address',
-		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url', 'googleplus','twitter', 'linkedin','facebook','job_title');
+		'country_address_class','tel','tel_class','website','website_class','fax','fax_class', 'org_url', 'googleplus','twitter', 'linkedin','facebook','job_title','ind_profile_image'
+		,'ind_profile_image_class');
 	    }
     /** @see WP_Widget::widget -- do not rename this */
     function widget($args, $instance) {	
@@ -37,10 +38,15 @@ class  hCard_widget extends WP_Widget {
     ?>
 
 			<div itemscope itemtype="http://schema.org/Person" id="ind-hcard" class="vcard <?php echo $main_class;?>">
+			<div class="row">
+			<div class="column four">
+			<img src="<?php echo $ind_profile_image;?>" class="<?php echo $ind_profile_image_class;?>" itemprop="image">
+			</div>
+			<div class="column eight">
 				    <span itemprop="name" class="fn n <?php echo $name_class;?>">
 					<span class="given-name" itemprop="givenName"> <?php echo $given_name;?></span><span class="additional-name" itemprop="additionalName"> <?php echo $middle_name;?></span><span class="family-name" itemprop="familyName"> <?php echo $family_name;?></span>
 				    </span>
-					<?php if($job_title !='' { ?><span itemprop="jobTitle" class="<?php echo $job_title_class; ?>"><?php echo $job_title;?></span><?php }?>
+					<?php if($job_title !='') { ?><span itemprop="jobTitle" class="<?php echo $job_title_class; ?>"><?php echo $job_title;?></span><?php }?>
 				    <?php if($org != '') { ?><div class="org <?php echo $organization_class;?>" itemscope itemtype="http://schema.org/Organization"><?php echo $organization;?></div><?php } ?>
 				    				    <span class="email <?php echo $email_class;?>" itemprop="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br>
 				    <a class="url <?php echo $website_class;?>" href="<?php echo $website;?>" itemprop="url"><?php echo $website;?></a>
@@ -57,11 +63,11 @@ class  hCard_widget extends WP_Widget {
 					<?php if ($twitter !== '') { ?><a href="http://twitter.com/<?php echo $twitter;?>" itemprop="url" rel="me" title="Twitter">@<?php echo $twitter;?></a><br><?php } ?>
 					<?php if($linkedin !== '') { ?><a href="<?php echo $linkedin;?>" itemprop="url" rel="me" title="LinkedIn">Connect on LinkedIn</a><br><?php } ?>
 					<?php if($facebook !== '') { ?><a href="<?php echo $facebook;?>" itemprop="url" rel="me" title="Facebook">Follow Me on Facebook</a><br><?php }?>
-				
+			</div>	
 					</div>
 			</div>
 			
-		
+		</div>
        <?php echo $after_widget;
        }
     }
@@ -159,6 +165,17 @@ class  hCard_widget extends WP_Widget {
 	    <tr>
 		<td><hr/></td>
 	    </tr>
+		<tr>
+		<td>
+		<table>
+		<tr><td><label>Profile Image URL:</label></td>
+		<td><input type="text" size="13px"  name="<?php echo $this->get_field_name('ind_profile_image'); ?>"  value="<?php echo $ind_profile_image;?>" /></td>
+		</tr>
+		<tr><td><label>Image Class</label></td>
+		<td><input type="text" size="13px"  name="<?php echo $this->get_field_name('ind_profile_image_class'); ?>"  value="<?php echo $ind_profile_image_class;?>" /></td>
+		</tr>
+		</table>
+		<tr><td><hr></td></tr>
 	    <tr>
 		<td>
 		    <table>
@@ -767,10 +784,8 @@ Let me know what you think about the plugin, and stay on top of all the changes 
 
 	</div>
 		<?php }?>
-		<?php 
-		
-
-		 function hcard_credit_link() {
+<?php 
+				 function hcard_credit_link() {
      echo '<p><a href="http://lautman.ca/hcard-widget-wordpress" target="_blank">Local SEO Plugin</a> by The Lautman Group</p>';
 }
 $options = get_option('hCard-settings');
