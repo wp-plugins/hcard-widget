@@ -3,7 +3,7 @@
 Plugin Name: hCard Widget
 Plugin URI: http://lautman.ca/hcard-wordpress-widget/
 Description: Outputs contact information in accordance with the hCard microformat standard (http://microformats.org
-Version: 1.4.1.1
+Version: 1.4.1.3
 Author: Michael Lautman, @michaellautman
 Author URI: http://lautman.ca
 License: GPLv3
@@ -39,9 +39,9 @@ class  hCard_widget extends WP_Widget {
 
 			<div itemscope itemtype="http://schema.org/Person" id="ind-hcard" class="vcard <?php echo $main_class;?>">
 			<div class="row">
-			<div class="column four">
+			<?php if($ind_profile_image !== '') {?><div class="column four">
 			<img src="<?php echo $ind_profile_image;?>" class="<?php echo $ind_profile_image_class;?>" itemprop="image">
-			</div>
+			</div><?php }?>
 			<div class="column eight">
 				    <span itemprop="name" class="fn n <?php echo $name_class;?>">
 					<span class="given-name" itemprop="givenName"> <?php echo $given_name;?></span><span class="additional-name" itemprop="additionalName"> <?php echo $middle_name;?></span><span class="family-name" itemprop="familyName"> <?php echo $family_name;?></span>
@@ -50,13 +50,14 @@ class  hCard_widget extends WP_Widget {
 				    <?php if($org != '') { ?><div class="org <?php echo $organization_class;?>" itemscope itemtype="http://schema.org/Organization"><?php echo $organization;?></div><?php } ?>
 				    				    <span class="email <?php echo $email_class;?>" itemprop="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span><br>
 				    <a class="url <?php echo $website_class;?>" href="<?php echo $website;?>" itemprop="url"><?php echo $website;?></a>
-				    <div class="adr <?php echo $address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				    <?php if($street_address !== '') { ?><div class="adr <?php echo $address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<div class="street-address <?php echo $street_address_class;?>" itemprop="streetAddress"> <?php echo $street_address;?></div>
 					<span class="locality <?php echo $locality_address_class;?>" itemprop="addressLocality"> <?php echo $locality_address;?></span>, <span class="region <?php echo $region_address_class;?>" itemprop="addressRegion"> <?php echo $region_address;?></span>
 					<span class="country-name <?php echo $country_address_class;?>" itemprop="addressCountry"> <?php echo $country_address;?></span>
 					<span class="postal-code <?php echo $postal_address_class;?>" itemprop="postalCode"> <?php echo $postal_address;?></span><br>
-				    </div>
-				    <div class="tel <?php echo $tel_class;?>" itemprop="telephone">T:<?php echo $tel;?></div>
+				    </div><?php }?>
+				    <div class="tel <?php echo $tel_class;?> show-for-small" itemprop="telephone">T:<a href="tel:+1<?php echo $tel;?>"><?php echo $tel;?></a></div>
+					<div class="tel <?php echo $tel_class;?> show-for-large" itemprop="telephone">T:<?php echo $tel;?></div>
 					<?php if($fax !== '') { ?><div class="tel <?php echo $fax_class;?>" itemprop="faxNumber">F:<?php echo $fax;?></div><?php } ?>
 					<div class="hCard-social-links" itemscope itemtype="http://schema.org/Person">
 					<?php if($googleplus !== '') { ?><a href="<?php echo $googleplus;?>" itemprop="url" rel="author" title="Google Plus">Find me on Google Plus+</a><br><?php } ?>
@@ -415,14 +416,15 @@ class  org_hCard_widget extends WP_Widget {
 				    <div class="fn org <?php echo $organization_class;?>"><?php echo $organization;?></div>
 				    <?php if($email !== '') { ?><span class="email <?php echo $org_email_class;?>" itemprop="email"><a href="mailto:<?php echo $org_email;?>"><?php echo $org_email;?></a></span><br><?php } ?>
 				    <a class="url <?php echo $org_website_class;?>" href="<?php echo $org_website;?>" itemprop="url"><?php echo $org_website;?></a>
-				    <div class="adr <?php echo $org_address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				    <?php if($org_street_address !== '') { ?><div class="adr <?php echo $org_address_class;?>" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<div class="street-address <?php echo $org_street_address_class;?>" itemprop="streetAddress"> <?php echo $org_street_address;?></div>
 					<span class="locality <?php echo $org_locality_address_class;?>" itemprop="addressLocality"> <?php echo $org_locality_address;?></span>, <span class="region <?php echo $org_region_address_class;?>" itemprop="addressRegion"> <?php echo $org_region_address;?></span><br>
 					<span class="country-name <?php echo $org_country_address_class;?>" itemprop="addressCountry"> <?php echo $org_country_address;?></span>,
-					<span class="postal-code <?php echo $org_postal_address_class;?>" itemprop="postalCode"> <?php echo $org_postal_address;?></span><br></div>
+					<span class="postal-code <?php echo $org_postal_address_class;?>" itemprop="postalCode"> <?php echo $org_postal_address;?></span><br></div><?php } ?>
 					<?php if($map_url !== '') {?>		
 					<a href="<?php echo $map_url;?>" target="_blank" itemprop="map">MAP</a><?php } ?>
-				    <?php if ($org_tel !== '') {?><div class="tel <?php echo $org_tel_class;?>" itemprop="telephone">T:<?php echo $org_tel;?></div><?php }?>
+					<?php if ($org_tel !== '') {?><div class="tel <?php echo $org_tel_class;?> show-for-small" itemprop="telephone">T:<a href="tel:+1<?php echo $org_tel;?>"><?php echo $org_tel;?></a></div><?php }?>
+					 <?php if ($org_tel !== '') {?><div class="tel <?php echo $org_tel_class;?> show-for-large" itemprop="telephone">T:<?php echo $org_tel;?></div><?php }?>
 					<?php if($org_fax !== '') {?><div class="tel <?php echo $org_fax_class;?>" itemprop="faxNumber">F:<?php echo $org_fax;?></div><?php } ?>
 					<div class="hCard-social-links" itemscope itemtype="http://schema.org/Person">
 					<?php if($org_googleplus !== '') { ?><a href="<?php echo $org_googleplus;?>" itemprop="url" rel="publisher">Find Us on Google Plus+</a><br><?php } ?>
@@ -739,10 +741,11 @@ function register_hcard_options_page(){
  function hcard_widget_options_output () {
 	?>
 	<div class="wrap">
+
 	<h2>hCard Widget For Wordpress</h2>
 	
 	More information coming soon.  For details visit the <a href="http://lautman.ca/hcard-wordpress-widget" target="_blank">plugin homepage</a>.
-	
+		<div style="float:right;">
 	<form method="post" action="options.php">
 	 <?php settings_fields( 'hcard-settings-group' ); ?>
    	 <?php $options = get_option('hCard-settings'); ?>
@@ -782,6 +785,14 @@ Let me know what you think about the plugin, and stay on top of all the changes 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <div class="fb-subscribe" data-href="https://www.facebook.com/thelautmangroup" data-show-faces="true" data-width="450"></div>
 
+	</div>
+	<div>
+	<h3>Want to Customize the Plugin?</h3>
+	If you need help installing, setting up or styling the plugin, we're here to help.  We can also create fully customized modified versions of the plugin to suit the your specific needs.
+	<br>
+	Installation packages start at $50(CAD) for a basic configuration and 3 months of email support.
+	Contact me at <a href="mailto:michael@lautman.ca">michael@lautman.ca</a> to find what we can do for your site.
+	</div>
 	</div>
 		<?php }?>
 <?php 
