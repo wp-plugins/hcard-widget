@@ -3,7 +3,7 @@
 Plugin Name: hCard Widget
 Plugin URI: http://lautman.ca/hcard-wordpress-widget/
 Description: Outputs contact information in accordance with the hCard microformat standard (http://microformats.org
-Version: 1.4.1.3
+Version: 1.4.2.0
 Author: Michael Lautman, @michaellautman
 Author URI: http://lautman.ca
 License: GPLv3
@@ -56,8 +56,7 @@ class  hCard_widget extends WP_Widget {
 					<span class="country-name <?php echo $country_address_class;?>" itemprop="addressCountry"> <?php echo $country_address;?></span>
 					<span class="postal-code <?php echo $postal_address_class;?>" itemprop="postalCode"> <?php echo $postal_address;?></span><br>
 				    </div><?php }?>
-				    <div class="tel <?php echo $tel_class;?> show-for-small" itemprop="telephone">T:<a href="tel:+1<?php echo $tel;?>"><?php echo $tel;?></a></div>
-					<div class="tel <?php echo $tel_class;?> show-for-large" itemprop="telephone">T:<?php echo $tel;?></div>
+				    <div class="tel <?php echo $tel_class;?>" itemprop="telephone">T:<a href="tel:+1<?php echo $tel;?>"><?php echo $tel;?></a></div>
 					<?php if($fax !== '') { ?><div class="tel <?php echo $fax_class;?>" itemprop="faxNumber">F:<?php echo $fax;?></div><?php } ?>
 					<div class="hCard-social-links" itemscope itemtype="http://schema.org/Person">
 					<?php if($googleplus !== '') { ?><a href="<?php echo $googleplus;?>" itemprop="url" rel="author" title="Google Plus">Find me on Google Plus+</a><br><?php } ?>
@@ -423,8 +422,7 @@ class  org_hCard_widget extends WP_Widget {
 					<span class="postal-code <?php echo $org_postal_address_class;?>" itemprop="postalCode"> <?php echo $org_postal_address;?></span><br></div><?php } ?>
 					<?php if($map_url !== '') {?>		
 					<a href="<?php echo $map_url;?>" target="_blank" itemprop="map">MAP</a><?php } ?>
-					<?php if ($org_tel !== '') {?><div class="tel <?php echo $org_tel_class;?> show-for-small" itemprop="telephone">T:<a href="tel:+1<?php echo $org_tel;?>"><?php echo $org_tel;?></a></div><?php }?>
-					 <?php if ($org_tel !== '') {?><div class="tel <?php echo $org_tel_class;?> show-for-large" itemprop="telephone">T:<?php echo $org_tel;?></div><?php }?>
+					<?php if ($org_tel !== '') {?><div class="tel <?php echo $org_tel_class;?> " itemprop="telephone">T:<a href="tel:+1<?php echo $org_tel;?>"><?php echo $org_tel;?></a></div><?php }?>
 					<?php if($org_fax !== '') {?><div class="tel <?php echo $org_fax_class;?>" itemprop="faxNumber">F:<?php echo $org_fax;?></div><?php } ?>
 					<div class="hCard-social-links" itemscope itemtype="http://schema.org/Person">
 					<?php if($org_googleplus !== '') { ?><a href="<?php echo $org_googleplus;?>" itemprop="url" rel="publisher">Find Us on Google Plus+</a><br><?php } ?>
