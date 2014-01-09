@@ -3,15 +3,16 @@ Contributors: michaellautman
 Donate link: http://lautman.ca/hcard-wordpress-widget/
 URL: http://lautman.ca/hcard-wordpress-widget/
 Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
-Requires at least: 3.0.1
-Tested up to: 3.4.2
-Stable tag: 1.4.2.1
+Requires at least: 3.5
+Tested up to: 3.8
+Stable tag: 1.5.0
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
 This plugin creates a new widget that outputs contact information (URL, address, email, phone) according to Schema.org and hCard microformat.
 
 == Description ==
+Give your local SEO efforts a boost!
 This plugin creates two new widgets that outputs contact information (URL, address, email, phone) according to the hCard microformat standard and Schema.org
 In addition, each field can be assigned a unique CSS class for styling.
 
@@ -29,11 +30,6 @@ In addition, each field can be assigned a unique CSS class for styling.
 * Facebook
 * Twitter
 * LinkedIn
-
-= Planned Features =
-* Option to add logos and images
-* Icons to improve the look of the output
-* More options to include more Schema.org elements such as jobTitle and the type of organization.
 
 == Installation ==
 
@@ -89,9 +85,8 @@ Add social profile links, an external css file, and an options page.
 = 1.4.1 =
 Fixed compatibility with "Widgets on Pages" plugin, and Job Title field.
 
-= 1.4.2.1 =
-Phone numbers are clickable.
-
+= 1.5.0 =
+Update to settings page.  Inclusion of standard CSS classes.
 == Upgrade Notice ==
 = 1.3 =
 Extended Schema.org, fixed some formatting and included a field for map url (Google, Bing, MapQuest).
@@ -108,8 +103,5 @@ Better compatibility with "Widgets on Pages" plugin, and added Job Title field.
 = 1.4.1.1 =
 Fixed error in Job Title Field
 
-= 1.4.1.2 =
-Empty fields are no longer displayed.
-
-= 1.4.2.1 =
-Corrected duplicate phone number, and phone number is clickable.  
+= 1.5.0 =
+Streamlined widget and admin area appearance.  Introduction of standard classes for all fields.
