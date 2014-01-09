@@ -1,0 +1,153 @@
+/*Formatting*/
+.row {padding-bottom:10px!important;}
+
+
+/*hc-button Styles*/
+hc-button, .hc-button {
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+  background-color: #008cba!;
+  border-color: #0079a1;
+  color: white;
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  padding-top: 1.0625rem;
+  padding-bottom: 1rem;
+  -webkit-appearance: none;
+  border: none;
+  font-weight: normal !important; }
+  hc-button:hover, hc-button:focus, .hc-button:hover, .hc-button:focus {
+    background-color: #0079a1; }
+  hc-button:hover, hc-button:focus, .hc-button:hover, .hc-button:focus {
+    color: white; }
+  hc-button.secondary, .hc-button.secondary {
+    background-color: #e7e7e7;
+    border-color: #dadada;
+    color: #333333; }
+    hc-button.secondary:hover, hc-button.secondary:focus, .hc-button.secondary:hover, .hc-button.secondary:focus {
+      background-color: #dadada; }
+    hc-button.secondary:hover, hc-button.secondary:focus, .hc-button.secondary:hover, .hc-button.secondary:focus {
+      color: #333333; }
+  hc-button.success, .hc-button.success {
+    background-color: #43ac6a;
+    border-color: #3c9a5f;
+    color: white; }
+    hc-button.success:hover, hc-button.success:focus, .hc-button.success:hover, .hc-button.success:focus {
+      background-color: #3c9a5f; }
+    hc-button.success:hover, hc-button.success:focus, .hc-button.success:hover, .hc-button.success:focus {
+      color: white; }
+  hc-button.alert, .hc-button.alert {
+    background-color: #f04124;
+    border-color: #ea2f10;
+    color: white!important; }
+    hc-button.alert:hover, hc-button.alert:focus, .hc-button.alert:hover, .hc-button.alert:focus {
+      background-color: #ea2f10; }
+    hc-button.alert:hover, hc-button.alert:focus, .hc-button.alert:hover, .hc-button.alert:focus {
+      color: white; }
+  hc-button.large, .hc-button.large {
+    padding-top: 1.125rem;
+    padding-right: 2.25rem;
+    padding-bottom: 1.1875rem;
+    padding-left: 2.25rem;
+    font-size: 1.25rem;
+    /*     @else                            { font-size: $padding - rem-calc(2); } */ }
+  hc-button.small, .hc-button.small {
+    padding-top: 0.875rem;
+    padding-right: 1.75rem;
+    padding-bottom: 0.9375rem;
+    padding-left: 1.75rem;
+    font-size: 0.8125rem;
+    /*     @else                            { font-size: $padding - rem-calc(2); } */ }
+  hc-button.tiny, .hc-button.tiny {
+    padding-top: 0.625rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.6875rem;
+    padding-left: 1.25rem;
+    font-size: 0.6875rem;
+    /*     @else                            { font-size: $padding - rem-calc(2); } */ }
+  hc-button.expand, .hc-button.expand {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%; }
+  hc-button.left-align, .hc-button.left-align {
+    text-align: left;
+    text-indent: 0.75rem; }
+  hc-button.right-align, .hc-button.right-align {
+    text-align: right;
+    padding-right: 0.75rem; }
+  hc-button.radius, .hc-button.radius {
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+  hc-button.round, .hc-button.round {
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px; }
+  hc-button.disabled, hc-button[disabled], .hc-button.disabled, .hc-button[disabled] {
+    background-color: #008cba;
+    border-color: #0079a1;
+    color: white;
+    cursor: default;
+    opacity: 0.7;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    hc-button.disabled:hover, hc-button.disabled:focus, hc-button[disabled]:hover, hc-button[disabled]:focus, .hc-button.disabled:hover, .hc-button.disabled:focus, .hc-button[disabled]:hover, .hc-button[disabled]:focus {
+      background-color: #0079a1; }
+    hc-button.disabled:hover, hc-button.disabled:focus, hc-button[disabled]:hover, hc-button[disabled]:focus, .hc-button.disabled:hover, .hc-button.disabled:focus, .hc-button[disabled]:hover, .hc-button[disabled]:focus {
+      color: white; }
+    hc-button.disabled:hover, hc-button.disabled:focus, hc-button[disabled]:hover, hc-button[disabled]:focus, .hc-button.disabled:hover, .hc-button.disabled:focus, .hc-button[disabled]:hover, .hc-button[disabled]:focus {
+      background-color: #008cba; }
+    hc-button.disabled.secondary, hc-button[disabled].secondary, .hc-button.disabled.secondary, .hc-button[disabled].secondary {
+      background-color: #e7e7e7;
+      border-color: #dadada;
+      color: #333333;
+      cursor: default;
+      opacity: 0.7;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      hc-button.disabled.secondary:hover, hc-button.disabled.secondary:focus, hc-button[disabled].secondary:hover, hc-button[disabled].secondary:focus, .hc-button.disabled.secondary:hover, .hc-button.disabled.secondary:focus, .hc-button[disabled].secondary:hover, .hc-button[disabled].secondary:focus {
+        background-color: #dadada; }
+      hc-button.disabled.secondary:hover, hc-button.disabled.secondary:focus, hc-button[disabled].secondary:hover, hc-button[disabled].secondary:focus, .hc-button.disabled.secondary:hover, .hc-button.disabled.secondary:focus, .hc-button[disabled].secondary:hover, .hc-button[disabled].secondary:focus {
+        color: #333333; }
+      hc-button.disabled.secondary:hover, hc-button.disabled.secondary:focus, hc-button[disabled].secondary:hover, hc-button[disabled].secondary:focus, .hc-button.disabled.secondary:hover, .hc-button.disabled.secondary:focus, .hc-button[disabled].secondary:hover, .hc-button[disabled].secondary:focus {
+        background-color: #e7e7e7; }
+    hc-button.disabled.success, hc-button[disabled].success, .hc-button.disabled.success, .hc-button[disabled].success {
+      background-color: #43ac6a;
+      border-color: #3c9a5f;
+      color: white;
+      cursor: default;
+      opacity: 0.7;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      hc-button.disabled.success:hover, hc-button.disabled.success:focus, hc-button[disabled].success:hover, hc-button[disabled].success:focus, .hc-button.disabled.success:hover, .hc-button.disabled.success:focus, .hc-button[disabled].success:hover, .hc-button[disabled].success:focus {
+        background-color: #3c9a5f; }
+      hc-button.disabled.success:hover, hc-button.disabled.success:focus, hc-button[disabled].success:hover, hc-button[disabled].success:focus, .hc-button.disabled.success:hover, .hc-button.disabled.success:focus, .hc-button[disabled].success:hover, .hc-button[disabled].success:focus {
+        color: white; }
+      hc-button.disabled.success:hover, hc-button.disabled.success:focus, hc-button[disabled].success:hover, hc-button[disabled].success:focus, .hc-button.disabled.success:hover, .hc-button.disabled.success:focus, .hc-button[disabled].success:hover, .hc-button[disabled].success:focus {
+        background-color: #43ac6a; }
+    hc-button.disabled.alert, hc-button[disabled].alert, .hc-button.disabled.alert, .hc-button[disabled].alert {
+      background-color: #f04124;
+      border-color: #ea2f10;
+      color: white;
+      cursor: default;
+      opacity: 0.7;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      hc-button.disabled.alert:hover, hc-button.disabled.alert:focus, hc-button[disabled].alert:hover, hc-button[disabled].alert:focus, .hc-button.disabled.alert:hover, .hc-button.disabled.alert:focus, .hc-button[disabled].alert:hover, .hc-button[disabled].alert:focus {
+        background-color: #ea2f10; }
+      hc-button.disabled.alert:hover, hc-button.disabled.alert:focus, hc-button[disabled].alert:hover, hc-button[disabled].alert:focus, .hc-button.disabled.alert:hover, .hc-button.disabled.alert:focus, .hc-button[disabled].alert:hover, .hc-button[disabled].alert:focus {
+        color: white; }
+      hc-button.disabled.alert:hover, hc-button.disabled.alert:focus, hc-button[disabled].alert:hover, hc-button[disabled].alert:focus, .hc-button.disabled.alert:hover, .hc-button.disabled.alert:focus, .hc-button[disabled].alert:hover, .hc-button[disabled].alert:focus {
+        background-color: #f04124; }
