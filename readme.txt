@@ -5,7 +5,7 @@ URL: http://lautman.ca/hcard-wordpress-widget/
 Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
 Requires at least: 3.5
 Tested up to: 3.8
-Stable tag: 1.5.0
+Stable tag: 1.5.2
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
@@ -87,6 +87,8 @@ Fixed compatibility with "Widgets on Pages" plugin, and Job Title field.
 
 = 1.5.0 =
 Update to settings page.  Inclusion of standard CSS classes.
+
+
 == Upgrade Notice ==
 = 1.3 =
 Extended Schema.org, fixed some formatting and included a field for map url (Google, Bing, MapQuest).
@@ -105,3 +107,8 @@ Fixed error in Job Title Field
 
 = 1.5.0 =
 Streamlined widget and admin area appearance.  Introduction of standard classes for all fields.
+
+= 1.5.2 =
+Fixed header info issue experienced by some users.
+
+
