@@ -3,7 +3,7 @@
 Plugin Name: hCard Widget
 Plugin URI: http://lautman.ca/hcard-wordpress-widget/
 Description: Outputs contact information in accordance with the hCard microformat standard (http://microformats.org
-Version: 1.5.2
+Version: 1.5.3
 Author: Michael Lautman, @michaellautman
 Author URI: http://lautman.ca
 License: GPLv3
@@ -509,90 +509,6 @@ class  org_hCard_widget extends WP_Widget {
 add_action('widgets_init', create_function('', 'return register_widget("org_hCard_widget");'));
 
 
-add_action('wp_enqueue_scripts', 'hcard_add_css');
 
-function hcard_add_css(){
-	wp_register_style('hcard-style', plugins_url('hCard_Widget/style.css', _FILE_));
-	wp_enqueue_style('hcard-style');
-	}
-
-add_action ('admin_menu', 'register_hcard_options_page');
-function register_hcard_options_page(){
-	add_options_page('hCard Widget Options' ,'hCard Widget', 'manage_options', 'hcard-widget-options-page', 'hcard_widget_options_output');
-	add_action('admin_init','register_hcard_settings');
-	}
-	function register_hcard_settings () {
-		register_setting('hcard-settings-group','hCard-settings', 'hCard_settings_validate');
-		
-		}
- 
- function hcard_widget_options_output () {
-	?>
-	<div class="wrap">
-
-	<h2>hCard Widget For Wordpress</h2>
-	
-	More information coming soon.  For details visit the <a href="http://lautman.ca/hcard-wordpress-widget" target="_blank">plugin homepage</a>.
-		<div style="float:right;">
-	<form method="post" action="options.php">
-	 <?php settings_fields( 'hcard-settings-group' ); ?>
-   	 <?php $options = get_option('hCard-settings'); ?>
-	<table class="form-table">
-	<tr valign="top">
-        <th scope="row"><h3>Show Your Appreciation</h3></th>
-		</tr>
-		<tr>
-		<th scope="row">Display a credit link in your site's footer?(Thanks)</th>
-        <td><input type="checkbox" name="hCard-settings[hCardCreditLink]" value="1" <?php checked('1', $options['hCardCreditLink']); ?> /></td>
-        </tr>
-		</table>
-		<?php submit_button(); ?>
-		</form>
-	
-	You can also show your apppreciation by <a href="http://my.e2rm.com/personalPage.aspx?registrationID=1688089" target="_blank">Donating to UNICEF</a>.
-	<br>
-	<div id="hcard-settings-social">
-	<h3>Why Not Share The Love?  Tell Your Friends!</h3>
-	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=388689464532677";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like" data-href="http://lautman.ca/hcard-widget-wordpress/" data-send="true" data-width="450" data-show-faces="true" data-action="recommend" data-font="lucida grande"></div>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bit.ly/TrZ2Wd" data-text="Using Wordpress? Supercharge your local SEO!" data-via="michaellautman" data-size="large">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	
-	</div>
-<div id="hcard-social-follow">
-<h3>Keep In Touch</h3>
-Let me know what you think about the plugin, and stay on top of all the changes and improvements in works for this plugin.<br>
-<a href="https://twitter.com/michaellautman" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @michaellautman</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<div class="fb-subscribe" data-href="https://www.facebook.com/thelautmangroup" data-show-faces="true" data-width="450"></div>
-
-	</div>
-	<div>
-	<h3>Want to Customize the Plugin?</h3>
-	If you need help installing, setting up or styling the plugin, we're here to help.  We can also create fully customized modified versions of the plugin to suit the your specific needs.
-	<br>
-	Installation packages start at $50(CAD) for a basic configuration and 3 months of email support.
-	Contact me at <a href="mailto:michael@lautman.ca">michael@lautman.ca</a> to find what we can do for your site.
-	</div>
-	</div>
-		<?php }?>
-<?php 
-				 function hcard_credit_link() {
-     echo '<p><a href="http://lautman.ca/hcard-widget-wordpress" target="_blank">Local SEO Plugin</a> by The Lautman Group</p>';
-}
-$options = get_option('hCard-settings');
-if ($options['hCardCreditLink'] == "1") { 
-add_action('wp_footer', 'hcard_credit_link');
-}
-function hCard_settings_validate($input) {
- $input['hCardCreditLink'] = ( $input['hCardCreditLink'] == 1 ? 1 : 0 );
-
- return $input;
- }
+//Load the Options Pag
+ require_once ('hcard-admin.php');
