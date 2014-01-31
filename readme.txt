@@ -5,7 +5,7 @@ URL: http://lautman.ca/hcard-wordpress-widget/
 Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
@@ -15,6 +15,8 @@ This plugin creates a new widget that outputs contact information (URL, address,
 Give your local SEO efforts a boost!
 This plugin creates two new widgets that outputs contact information (URL, address, email, phone) according to the hCard microformat standard and Schema.org
 In addition, each field can be assigned a unique CSS class for styling.
+
+Visit the [support forum](http://lautman.ca/forums/forum/support/hcard/) on our site for help.
 
 = Available Fields =
 * Widget Title
@@ -88,6 +90,9 @@ Fixed compatibility with "Widgets on Pages" plugin, and Job Title field.
 = 1.5.0 =
 Update to settings page.  Inclusion of standard CSS classes.
 
+=1.5.4=
+Updates to settings page, removed extra div and streamlined CSS classes.
+
 
 == Upgrade Notice ==
 = 1.3 =
@@ -111,4 +116,6 @@ Streamlined widget and admin area appearance.  Introduction of standard classes 
 = 1.5.2 =
 Fixed header info issue experienced by some users.
 
+= 1.5.4 =
+Debugging for improved compatibility with themes.
 
