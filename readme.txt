@@ -5,7 +5,7 @@ URL: http://lautman.ca/hcard-wordpress-widget/
 Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 1.5.4
+Stable tag: 1.5.5
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
@@ -90,8 +90,10 @@ Fixed compatibility with "Widgets on Pages" plugin, and Job Title field.
 = 1.5.0 =
 Update to settings page.  Inclusion of standard CSS classes.
 
-=1.5.4=
+= 1.5.4 =
 Updates to settings page, removed extra div and streamlined CSS classes.
+= 1.5.5 =
+Fixed duplicate headers issue experienced by some users.
 
 
 == Upgrade Notice ==
@@ -118,4 +120,6 @@ Fixed header info issue experienced by some users.
 
 = 1.5.4 =
 Debugging for improved compatibility with themes.
+= 1.5.5 =
+Resolves duplicate header issue experienced by some users.
 
