@@ -4,8 +4,8 @@ Donate link: http://lautman.ca/hcard-wordpress-widget/
 URL: http://lautman.ca/hcard-wordpress-widget/
 Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
 Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.5.5
+Tested up to: 3.9
+Stable tag: 1.5.6
 License: GPLv3
 License URI: http://opensource.org/licenses/gpl-3.0.html
 
