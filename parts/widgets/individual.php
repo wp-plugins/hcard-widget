@@ -26,7 +26,7 @@ Description: hCard for Individuals
 <span itemprop="postalCode"><?php echo $settings['hcard_ind_postcode']; ?></span>
 </div>
 <?php if(empty($settings['hcard_ind_website'])) {} else { ?><a href="<?php echo $settings['hcard_ind_website'];?>" target="_blank" ><?php echo $settings['hcard_ind_website'];?></a><?php } ?>
-<?php if ($settings['hcard_ind_phone'] != '') {?><span itemprop="telephone" class="hcard-ind-phone">Phone:<?php echo $settings['hcard_ind_phone']; ?></span><?php }?>
+<?php if ($settings['hcard_ind_phone'] != '') {?><span itemprop="telephone" class="hcard-ind-phone">Phone:<a href="tel:<?php echo $settings['hcard_ind_phone']; ?>"><?php echo $settings['hcard_ind_phone']; ?></a></span><?php }?>
 <?php if ($settings['hcard_ind_fax'] != '') {?><span itemprop="faxNumber" class="hcard-ind-fax">Fax:<?php echo $settings['hcard_ind_fax']; ?></span><?php }?>
 <a href="mailto:<?php echo $settings['hcard_ind_email']; ?>" itemprop="email" class="hcard-ind-email"><?php echo $settings['hcard_ind_email'];?></a><br/>
 	

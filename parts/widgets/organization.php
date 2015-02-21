@@ -25,7 +25,7 @@ Description: hCard for Organizations
 <span itemprop="addressCountry"><?php echo $settings['hcard_org_country']; ?></span>
 <span itemprop="postalCode"><?php echo $settings['hcard_org_postcode']; ?></span>
 </div>
-<span itemprop="telephone">Phone:<?php echo $settings['hcard_org_phone']; ?></span>
+<span itemprop="telephone">Phone:<a href="tel:<?php echo $settings['hcard_org_phone'];?>"><?php echo $settings['hcard_org_phone']; ?></a></span>
 <span itemprop="faxNumber">Fax:<?php echo $settings['hcard_org_fax']; ?></span>
 <a href="mailto:<?php echo $settings['hcard_org_email']; ?>" itemprop="email"><?php echo $settings['hcard_org_email'];?></a><br/>
 <a href="http://<?php echo $settings['hcard_org_url'];?> itemprop="url" target="_blank"><?php echo $settings['hcard_org_url'];?></a><br/>
