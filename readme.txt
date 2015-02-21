@@ -1,18 +1,40 @@
-=== Piklist Plugin Builder ===
+=== hCard Widget for WordPress ===
 Contributors: michaellautman
-Tags: boilerplate, piklist, plugin builder, custom post type, widget
+Tags: hCard,schema.org,seo, local seo, search engine optimization, widget piklist, 
 Donate link: http://lautman.ca
 Requires at least: 4.0
-Tested up to: 4.1
-Stable tag: 2.1
+Tested up to: 4.1.1
+Stable tag: 2.1.1
 Type:Piklist
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-
+ 
 Creates a widget that outputs contact information for individuals or organizations with Schema.org compliant markup.
 
 == Description ==
-Piklist Plugin Builder provides a boilerplate for building WordPress plugins using [Piklist] (http://piklist.com).  It includes the required folder structure and the Piklist checker.  Install and edit everything except the call to class-piklist-checker.php.
+Give your local SEO efforts a boost!
+This plugin creates two new widgets that outputs contact information (URL, address, email, phone) according to the hCard microformat standard and Schema.org
+In addition, each field can be assigned a unique CSS class for styling.
+
+Visit the [support forum](http://lautman.ca/forums/) on our site for help.
+
+
+= Available Fields =
+* Widget Title
+* Name (Given, Middle, Family)
+* Organization
+* Address
+* Website
+* Email
+* Map (Organizations only - for now)
+* Telephone
+* Fax
+* Google Plus (rel="author" for individuals and rel="publisher" for organizations)
+* Facebook
+* Twitter
+* LinkedIn
+
+
 
 == Installation ==
 Method 1

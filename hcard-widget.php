@@ -3,7 +3,7 @@
  * Plugin Name: hCard Widget
  * Plugin URI: http://lautman.ca
  * Description: Creates widget that outputs contact information in Schema.org compliant format.
- * Version: 2.1
+ * Version: 2.1.1
  * Author: michaellautman
  * Author URI: http://lautman.ca
  * Plugin Type: Piklist
