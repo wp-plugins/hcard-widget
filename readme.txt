@@ -1,125 +1,134 @@
-=== hCard Widget for Wordpress ===
-Contributors: michaellautman
-Donate link: http://lautman.ca/hcard-wordpress-widget/
-URL: http://lautman.ca/hcard-wordpress-widget/
-Tags: search engine optimization, seo, local seo, hCard, microformats, schema.org, contact information
-Requires at least: 3.5
-Tested up to: 3.9
-Stable tag: 1.5.6
-License: GPLv3
-License URI: http://opensource.org/licenses/gpl-3.0.html
+=== hCard Widget for WordPress ===
 
-This plugin creates a new widget that outputs contact information (URL, address, email, phone) according to Schema.org and hCard microformat.
+Contributors: michaellautman
+
+Tags: hCard,schema.org,seo, local seo, search engine optimization, widget piklist, 
+
+Donate link: http://lautman.ca
+
+Requires at least: 4.0
+
+Tested up to: 4.1.2
+
+Stable tag: 2.2
+
+Type:Piklist
+
+License: GPLv3 or later
+
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+ 
+
+Creates a widget that outputs contact information for individuals or organizations with Schema.org compliant markup.
+
+
 
 == Description ==
+
 Give your local SEO efforts a boost!
+
 This plugin creates two new widgets that outputs contact information (URL, address, email, phone) according to the hCard microformat standard and Schema.org
+
 In addition, each field can be assigned a unique CSS class for styling.
 
-Visit the [support forum](http://lautman.ca/forums/forum/support/hcard/) on our site for help.
+
+
+Visit the [support forum](http://lautman.ca/forums/) on our site for help.
+
+
+
+
 
 = Available Fields =
+
 * Widget Title
+
 * Name (Given, Middle, Family)
+
 * Organization
+
 * Address
+
 * Website
+
 * Email
+
 * Map (Organizations only - for now)
+
 * Telephone
+
 * Fax
+
 * Google Plus (rel="author" for individuals and rel="publisher" for organizations)
+
 * Facebook
+
 * Twitter
+
 * LinkedIn
+
+
+
+
+
+
 
 == Installation ==
 
-1. Download hCard Widget for WordPress plugin 'hCard_Widget.zip'
-1. Login to WordPress and go to Plugins-> Add New -> Upload
-1. Click the Choose File button and select hCard_Widget.zip from your hard drive.
-1. Click Install Now
-1. Once the plugin has been installed, click Activate.
+Method 1
 
-METHOD 2 - FTP
+1. In your WordPress installation, go to Plugins->Add New.
 
-1. Download hCard Widget for WordPress plugin 'hCard_Widget.zip'. Extract the contents of the file.
-1. Using your favourite FTP client, upload the folder to '/wp-content/plugins/' on your server.
-1. Login to your WordPress account and go to the Plugins page.
-1. Activate the plugin.
+1. In the search box, type 'hCard Widget'.
 
-== Frequently Asked Questions ==
-= Why didn't someone think of this before ? =
-No idea.
+1. Install and activate.
 
-= What do I do if I have problem? =
-[Email me](http://lautman.ca/contact/)
 
-= How Do I style my contact info? =
-Assign a class to the element(s) you want to you want to style and then refer to that class in your theme's 'style.css' file.
 
-== Screenshots ==
-1. hCard Widget in Appearance->Widgets
+Method 2
+
+1. Download the plugin.
+
+1. In your WordPress installation, navigate to Plugins->Add New->Upload
+
+1. Choose \'hcard-widget.zip\' from your computer
+
+
+
+Method 3
+
+1. Download the plugin.
+
+1. Extract the folder
+
+1. Using your favourite FTP client, upload the folder \'hcard-widget\' to \'/wp-content/plugins\' on your server
+
+1. In your WordPress installation, navigate to Plugins->Installed Plugins and activate hCard Widget.
+
 
 
 == Changelog ==
-= 1.0 =
-Initial release. 
 
-= 1.1 =
-Fixed layout and added the option to link both name and organization name.
 
-= 1.2 =
-Added basic support for Schema.org and separate widgets for individuals and organizations
+= 2.1.2 =
 
-= 1.3 =
-Added field for map URL.
+Minor upgrades.  Small changes to admin page, included icons for plugin installer.
 
-= 1.3.2 =
-Added screenshot and updated readme.txt file.
+= 2.0 =
 
-= 1.3.4 =
-Removed extra </div>
+Complete overhaul of the plugin.  The plugin now requires Piklist.
 
-= 1.4.0 =
-Add social profile links, an external css file, and an options page.  
-
-= 1.4.1 =
-Fixed compatibility with "Widgets on Pages" plugin, and Job Title field.
-
-= 1.5.0 =
-Update to settings page.  Inclusion of standard CSS classes.
-
-= 1.5.4 =
-Updates to settings page, removed extra div and streamlined CSS classes.
-= 1.5.5 =
-Fixed duplicate headers issue experienced by some users.
 
 
 == Upgrade Notice ==
-= 1.3 =
-Extended Schema.org, fixed some formatting and included a field for map url (Google, Bing, MapQuest).
 
-= 1.3.4 =
-Removed extra </div>.
+= 2.0 =
 
-= 1.4.0 =
-Added social profiles, options page with credit and donate link.
+This is a major upgrade, and makes the plugin functional again!
 
-= 1.4.1 =
-Better compatibility with "Widgets on Pages" plugin, and added Job Title field.
 
-= 1.4.1.1 =
-Fixed error in Job Title Field
 
-= 1.5.0 =
-Streamlined widget and admin area appearance.  Introduction of standard classes for all fields.
+== Notes ==
 
-= 1.5.2 =
-Fixed header info issue experienced by some users.
-
-= 1.5.4 =
-Debugging for improved compatibility with themes.
-= 1.5.5 =
-Resolves duplicate header issue experienced by some users.
-
+This plugin was built on the amazing [Piklist](http://piklist.com) using the [Piklist Plugin Builder] (https://github.com/michaellautman/Piklist-Plugin-Builder).
