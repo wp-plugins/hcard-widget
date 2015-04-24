@@ -1,0 +1,270 @@
+# Copyright (C) 2015 hCard Widget
+# This file is distributed under the same license as the hCard Widget
+msgid ""
+msgstr ""
+"Project-Id-Version: hCard Widget\\rPlugin URI: http://lautman.ca/hcard-"
+"wordpress-widget/\\rDescription: Outputs contact information in accordance "
+"with the hCard microformat standard (http://microformats.org\\rVersion: "
+"1.5.6\\rAuthor: Michael Lautman, @michaellautman\\rAuthor URI: http://"
+"lautman.ca 1.5.6\\rAuthor: Michael Lautman, @michaellautman\\rAuthor URI: "
+"http://lautman.ca\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/hcard-widget\n"
+"POT-Creation-Date: 2015-04-24 10:45:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-04-24 07:04-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.7.6\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_CA\n"
+
+#: class-piklist-checker.php:388
+msgid "Your theme requires PIKLIST to work properly."
+msgstr "Votre thème nécessite PIKLIST pour fonctionner correctement."
+
+#: class-piklist-checker.php:418
+msgid "The following plugin(s) require PIKLIST, and have been deactivated:"
+msgstr "Le(s) plugin(s) suivant(s) nécessitent Piklist et ont été désactivés."
+
+#: class-piklist-checker.php:466
+msgid "You can:"
+msgstr "Vous pouvez:"
+
+#: class-piklist-checker.php:505
+msgid "Activate Piklist for this site"
+msgstr "Activez Piklist pour ce site"
+
+#: class-piklist-checker.php:523
+msgid "Network Activate Piklist for all sites."
+msgstr "Activer Piklist sur le Réseau pour tous les sites."
+
+#: class-piklist-checker.php:541
+msgid "Install Piklist"
+msgstr "Installer Piklist"
+
+#: class-piklist-checker.php:562
+msgid "%1$s %2$sDismiss this message."
+msgstr "%1$s %2$s Annuler ce message."
+
+#: class-piklist-checker.php:574
+msgid "%1$s %2$sChange your theme."
+msgstr "%1$s %2$sChangez votre thème."
+
+#: hcard-widget.php:104
+msgid "hCard Widget"
+msgstr "Widget hCard"
+
+#: hcard-widget.php:126
+msgid "hCard Widget Settings"
+msgstr "Paramètres du Widget hCard"
+
+#: hcard-widget.php:128
+msgid "hCard Settings"
+msgstr "Paramètres"
+
+#: hcard-widget.php:144
+msgid "Basic"
+msgstr "De Base"
+
+#: hcard-widget.php:146
+msgid "Save Settings"
+msgstr "Sauvgarder"
+
+#: parts/admin-pages/welcome.php:141
+msgid "Hey, thanks for installing hCard Widget for WordPress."
+msgstr "Merci d'avoir installer hCard Widget for WordPress."
+
+#: parts/admin-pages/welcome.php:151
+msgid "Getting Started"
+msgstr "Pour commencer"
+
+#: parts/admin-pages/welcome.php:153
+msgid "Using hCard Widget is really easy."
+msgstr "hCard Widget est très facile à utiliser."
+
+#: parts/admin-pages/welcome.php:157
+msgid ""
+"On your widgets page you'll see a new widget called <strong>hCard Widget</"
+"strong>. Both the Individual widget and the Organization widget are in there."
+msgstr ""
+"Sur la page \"Widgets\" vous trouverez un nouveau widget <strong>Widget "
+"hCard</strong>.  Les widgets pour les individuels et les organisations s'y "
+"retrouvent."
+
+#: parts/admin-pages/welcome.php:159
+msgid "Drag it to the widget area where you want it to appear."
+msgstr "Apporte le widget au 'sidebar' ou vous voulez qu'il apparaît."
+
+#: parts/admin-pages/welcome.php:161
+msgid ""
+"Click on the arrow to open the widget.  There will be a drop-down menu where "
+"you can select the widget (individual or organization) that you want to "
+"include."
+msgstr ""
+"Cliquez sur la flèche pour ouvrir le widget.  Dans le menu qui paraît, "
+"selectionnez le type de widget (individuel ou organisation) que vous voulez "
+"inclure."
+
+#: parts/admin-pages/welcome.php:163
+msgid "Fill in the details."
+msgstr "Entrez les détails."
+
+#: parts/admin-pages/welcome.php:165
+msgid "Click save. You're done."
+msgstr "Sauvegardez. C'est tout."
+
+#: parts/admin-pages/welcome.php:211
+msgid "No items"
+msgstr "Aucun item"
+
+#: parts/admin-pages/welcome.php:333
+msgid "Looking for help?"
+msgstr "Besoin d'aide?"
+
+#: parts/admin-pages/welcome.php:346
+msgid "Take a look at some of our other plugins:"
+msgstr "Voir nos autres extensions:"
+
+#: parts/admin-pages/welcome.php:358
+msgid "Share The Love!"
+msgstr "Partagez l'amour!"
+
+#: parts/settings/settings.php:34
+msgid "Custom CSS"
+msgstr "CSS"
+
+#: parts/settings/settings.php:40
+msgid "You can customize the look of your widgets with CSS."
+msgstr "Vous pouvez personnaliser l'apparence de vous widgets avec le CSS."
+
+#: parts/widgets/individual-form.php:11 parts/widgets/organization-form.php:16
+msgid "Widget Title"
+msgstr "Titre du Widget"
+
+#: parts/widgets/individual-form.php:35
+msgid "Name"
+msgstr "Nom"
+
+#: parts/widgets/individual-form.php:59
+msgid "Job Title"
+msgstr "Titre du poste"
+
+#: parts/widgets/individual-form.php:83
+msgid "Organization"
+msgstr "Organisation"
+
+#: parts/widgets/individual-form.php:107
+#: parts/widgets/organization-form.php:130
+msgid "Phone"
+msgstr "Téléhpone"
+
+#: parts/widgets/individual-form.php:131
+#: parts/widgets/organization-form.php:166
+msgid "Fax"
+msgstr "Télécopieur"
+
+#: parts/widgets/individual-form.php:155
+#: parts/widgets/organization-form.php:202
+msgid "Email"
+msgstr "Courriel"
+
+#: parts/widgets/individual-form.php:179
+#: parts/widgets/organization-form.php:238
+msgid "Website"
+msgstr "Site web"
+
+#: parts/widgets/individual-form.php:203
+#: parts/widgets/organization-form.php:271
+msgid "Street Address"
+msgstr "Adresse"
+
+#: parts/widgets/individual-form.php:227
+#: parts/widgets/organization-form.php:307
+msgid "Address Line 2"
+msgstr "Adresse (ligne 2)"
+
+#: parts/widgets/individual-form.php:249
+#: parts/widgets/organization-form.php:340
+msgid "City"
+msgstr "Ville"
+
+#: parts/widgets/individual-form.php:273
+#: parts/widgets/organization-form.php:376
+msgid "State or Province"
+msgstr "Province/Etat"
+
+#: parts/widgets/individual-form.php:297
+#: parts/widgets/organization-form.php:412
+msgid "Country"
+msgstr "Pays"
+
+#: parts/widgets/individual-form.php:319
+#: parts/widgets/organization-form.php:445
+msgid "ZIP/Postal Code"
+msgstr "Code postal"
+
+#: parts/widgets/individual-form.php:343
+#: parts/widgets/organization-form.php:481
+msgid "Twitter"
+msgstr "Twitter"
+
+#: parts/widgets/individual-form.php:345
+#: parts/widgets/organization-form.php:484
+msgid "Twitter username without the @"
+msgstr "Nom d'utilisateur sans le @"
+
+#: parts/widgets/individual-form.php:367
+#: parts/widgets/organization-form.php:517
+msgid "Facebook URL"
+msgstr "Page Facebook"
+
+#: parts/widgets/individual-form.php:391
+#: parts/widgets/organization-form.php:553
+msgid "Google Plus URL"
+msgstr "Page Google Plus"
+
+#: parts/widgets/individual-form.php:415
+#: parts/widgets/organization-form.php:589
+msgid "LinkedIn URL"
+msgstr "Page LinkedIn"
+
+#: parts/widgets/organization-form.php:58
+msgid "Legal Name"
+msgstr "Nom légal"
+
+#: parts/widgets/organization-form.php:94
+msgid "Brand"
+msgstr "Marque"
+
+#. Plugin Name of the plugin/theme
+msgid ""
+"hCard Widget\rPlugin URI: http://lautman.ca/hcard-wordpress-widget/"
+"\rDescription: Outputs contact information in accordance with the hCard "
+"microformat standard (http://microformats.org\rVersion: 1.5.6\rAuthor: "
+"Michael Lautman, @michaellautman\rAuthor URI: http://lautman.ca"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"http://lautman.ca/hcard-wordpress-widget/\rDescription: Outputs contact "
+"information in accordance with the hCard microformat standard (http://"
+"microformats.org\rVersion: 1.5.6\rAuthor: Michael Lautman, @michaellautman"
+"\rAuthor URI: http://lautman.ca"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Outputs contact information in accordance with the hCard microformat "
+"standard (http://microformats.org\rVersion: 1.5.6\rAuthor: Michael Lautman, "
+"@michaellautman\rAuthor URI: http://lautman.ca"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Michael Lautman, @michaellautman\rAuthor URI: http://lautman.ca"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://lautman.ca"
+msgstr ""
